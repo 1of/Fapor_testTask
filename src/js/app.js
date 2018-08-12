@@ -11,6 +11,15 @@ import formValid from './modules/formValidate';
   // When DOM is ready
   $(() => {
 
+  $('.menu').on('click', function(event){
+    if ( $('.nav-menu').hasClass('display-toggle') ) {
+$('.nav-menu').removeClass('display-toggle');
+    } else {
+      $('.nav-menu').addClass('display-toggle');
+    }
+    //$('.nav-menu').hasClass('dispaly-toggle') ? $('.nav-menu').removeClass('dispaly-toggle') : $('.nav-menu').addClass('dispaly-toggle');
+  });
+
 	$('#usersubscribe').on('keyup input', function() {
 
 		let email = $("input[name='email']",this).val();

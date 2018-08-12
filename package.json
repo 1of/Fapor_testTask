@@ -1,18 +1,17 @@
 {
-  "name": "web-starter-jc",
+  "name": "Silifonov",
   "version": "2.0.1",
-  "description": "Starter kit for markup projects",
+  "description": "",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/justcoded/web-starter-kit"
+    "url": ""
   },
   "keywords": [
     "starter",
     "markup",
-    "JustCoded",
     "jc"
   ],
-  "author": "JustCoded",
+  "author": "Silifonov",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/justcoded/web-starter-kit/issues"
@@ -54,7 +53,7 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "engines": {
-    "node": ">=6.0.0"
+    "node": "^6.0.0"
   },
   "scripts": {
     "test": "gulp production",

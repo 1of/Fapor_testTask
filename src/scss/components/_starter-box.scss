@@ -1,5 +1,5 @@
 // Note: This is an example of components style, so please remove it or re-write it on your styles.
-@import "fonts/fonts.scss";
+@import "../../fonts/fonts.scss";
 
 
 $primary_bgcolor: #24282f;
@@ -40,6 +40,7 @@ nav {
 div.logo {
   width: 20%;
   align-items: center;
+  text-align: center;
 }
 
 ul.nav-menu {
@@ -356,9 +357,51 @@ div.social-media div.social a:hover {
   }
 }
 
-
+ul.display-toggle {
+  display: flex;
+}
 
 //Media
+@media (max-width: 680px) {
+  nav {
+    position: fixed;
+    top: 0;
+ z-index: 250;
+background: rgba(36,40,47, 0.56);
+  }
+
+div.logo{
+  width: 25%;
+}
+
+ul.display-toggle {
+  display: none;
+}
+
+  ul.nav-menu {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    padding-left: 10px;
+    background: rgba(36,40,47, 0.76);
+
+  }
+ul.nav-menu a {
+      font-size: 10px;
+  padding: 2px 5px 5px 5px;
+}
+  ul.nav-menu a:hover {
+    border-bottom: none;
+  }
+
+  nav .active-menu {
+  border-bottom: none;
+}
+}
+
 //tablets
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   
@@ -368,19 +411,15 @@ div.social-media div.social a:hover {
 }
 
 }
+
+
 //phones
 @media (min-width: 320px) and (max-width: 480px) {
   nav {
-    flex-direction: column;
+    flex-direction: row;
+    width: 90px;
   }
-   ul.nav-menu {
-    width: 100%;
-    justify-content: flex-end;
-   }
-  ul.nav-menu a {
-    font-size: 10px;
-    padding: 0 10px 48px 0;
-  }
+
   div.logo {
     width: 100%;
   }
@@ -393,6 +432,10 @@ header div.carousel-inner {
  .managers-list {
   flex-direction: column;
  }
+  .simple-manager {
+    margin-bottom: 20px;
+    padding: 5px 15px 5px 15px;
+  }
  .simple-manager img{
   width: 100%;
  }
